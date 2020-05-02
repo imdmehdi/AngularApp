@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "ayCzB2uzAGT4ED3RV31gNDOQx8bZXdMYXvPuc3+kjU21CXH2AbO03zBS8bqXk3q1zgekVTdcCwIjYy/OvQSpvQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mehdi.imam\\Source\\Repos\\AngularApi\\AngularApp\\AngularApp\\AngularApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.0\\microsoft.aspnetcore.nodeservices.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.1.0\\microsoft.aspnetcore.spaservices.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\3.1.0\\microsoft.aspnetcore.spaservices.extensions.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.0\\microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.0\\microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.0\\microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.0\\microsoft.extensions.fileproviders.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.0\\microsoft.extensions.fileproviders.physical.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.0\\microsoft.extensions.filesystemglobbing.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.logging\\3.1.0\\microsoft.extensions.logging.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.logging.configuration\\3.1.0\\microsoft.extensions.logging.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.logging.console\\3.1.0\\microsoft.extensions.logging.console.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.0\\microsoft.extensions.options.configurationextensions.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\mehdi.imam\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
