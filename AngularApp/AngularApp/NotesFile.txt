@@ -4,3 +4,8 @@ After upgrade got issue in opening web app: //export { renderModule, renderModul
 for creating new component: ng g component Register skip-import
 -------------------
 After adding new component, need to do changes in app.module.ts for routing
+-----------
+changing the default csproj file.
+<ItemGroup>
+    <Content Include="ClientApp\tsconfig.json" />
+</ItemGroup> for experimentalDecorators Typescript warning 

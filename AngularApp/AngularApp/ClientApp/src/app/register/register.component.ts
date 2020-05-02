@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { RegisterService } from '../shared/service/register.service';
+import { RegisterBase } from '../shared/models/register-base';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  providers: [RegisterService]
 })
-export class RegisterComponent implements OnInit {
 
-  constructor() { }
+export class RegisterComponent {
+  registerlist$: Observable<RegisterBase<any>[]>;
 
-  ngOnInit(): void {
+  constructor(service: RegisterService) {
+    this.registerlist$ = service.getQuestions();
   }
-
 }

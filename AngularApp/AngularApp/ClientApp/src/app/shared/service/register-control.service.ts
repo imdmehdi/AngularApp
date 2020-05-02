@@ -7,12 +7,12 @@ import { RegisterBase } from '../models/register-base';
 export class RegisterControlService {
   constructor() { }
 
-  toFormGroup(questions: RegisterBase<string>[]) {
+  toFormGroup(registerlist: RegisterBase<string>[]) {
     let group: any = {};
 
-    questions.forEach(question => {
-      group[question.key] = question.required ? new FormControl(question.value || '', Validators.required)
-        : new FormControl(question.value || '');
+    registerlist.forEach(register => {
+      group[register.key] = register.required ? new FormControl(register.value || '', Validators.required)
+        : new FormControl(register.value || '');
     });
     return new FormGroup(group);
   }
