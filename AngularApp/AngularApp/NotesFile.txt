@@ -1,0 +1,6 @@
+﻿
+After upgrade got issue in opening web app: //export { renderModule, renderModuleFactory } from '@angular/platform-server'; in main.ts file
+-------------------
+for creating new component: ng g component Register skip-import
+-------------------
+After adding new component, need to do changes in app.module.ts for routing
