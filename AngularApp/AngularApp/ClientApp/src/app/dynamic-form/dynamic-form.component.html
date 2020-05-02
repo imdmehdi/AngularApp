@@ -4,10 +4,11 @@
     <div *ngFor="let register of registerlist" class="form-row">
       <app-dynamic-form-register [register]="register" [form]="form"></app-dynamic-form-register>
     </div>
-
+    <br />
     <div class="form-row">
       <button type="submit" [disabled]="!form.valid">Save</button>
     </div>
+    <br />
   </form>
 
   <div *ngIf="payLoad" class="form-row">

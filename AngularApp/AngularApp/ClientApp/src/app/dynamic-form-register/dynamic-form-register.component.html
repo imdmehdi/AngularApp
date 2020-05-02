@@ -5,11 +5,11 @@
 
     <input *ngSwitchCase="'textbox'" [formControlName]="register.key"
            [id]="register.key" [type]="register.type">
-
+    <br />
     <select [id]="register.key" *ngSwitchCase="'dropdown'" [formControlName]="register.key">
       <option *ngFor="let opt of register.options" [value]="opt.key">{{opt.value}}</option>
     </select>
-
+    <br />
   </div>
 
   <div class="errorMessage" *ngIf="!isValid">{{register.label}} is required</div>

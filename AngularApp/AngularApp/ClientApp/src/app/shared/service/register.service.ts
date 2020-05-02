@@ -22,7 +22,7 @@ export class RegisterService {
           { key: 'good', value: 'Good' },
           { key: 'unproven', value: 'Unproven' }
         ],
-        order: 3
+        order: 4
       }),
 
       new RegisterTextbox({
@@ -32,12 +32,18 @@ export class RegisterService {
         required: true,
         order: 1
       }),
-
+      new RegisterTextbox({
+        key: 'lastName',
+        label: 'Last name',
+        value: 'Khan',
+        required: true,
+        order: 2
+      }),
       new RegisterTextbox({
         key: 'emailAddress',
         label: 'Email',
         type: 'email',
-        order: 2
+        order: 3
       })
     ];
 
