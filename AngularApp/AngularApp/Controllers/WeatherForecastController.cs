@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using AngularApp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -35,5 +38,14 @@ namespace AngularApp.Controllers
             })
             .ToArray();
         }
+
+       
+        [HttpPost("SaveRegistrationDetails")]
+        public void SaveRegistrationDetails([FromBody]RegisterDetails obj)
+        {
+            var i = obj;
+        }
+        
+
     }
 }
