@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using AngularApp.Models;
+using EntitiesLibrary.DTO;
+using EntitiesLibrary.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,6 +15,8 @@ namespace AngularApp.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        IRegisterDetails _registerDetails;
+        
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -21,9 +24,11 @@ namespace AngularApp.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IRegisterDetails registerDetails)
         {
             _logger = logger;
+            _registerDetails = registerDetails;
+
         }
 
         [HttpGet]
@@ -41,9 +46,9 @@ namespace AngularApp.Controllers
 
        
         [HttpPost("SaveRegistrationDetails")]
-        public void SaveRegistrationDetails([FromBody]RegisterDetails obj)
+        public void SaveRegistrationDetails([FromBody]DTORegisterDetails obj)
         {
-            var i = obj;
+            var i = _registerDetails.SaveRegisterDetails( obj);
         }
         
 

@@ -1,7 +1,11 @@
+using EntitiesLibrary;
+using EntitiesLibrary.DbCont;
+using EntitiesLibrary.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +30,10 @@ namespace AngularApp
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddTransient<IRegisterDetails, RegisterDetails>();
+            services.AddDbContext<DboContext>(options =>
+                    options.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=AngularAppDB;Trusted_Connection=True;MultipleActiveResultSets=true")
+                        );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
     <Content Include="ClientApp\tsconfig.json" />
   </ItemGroup>
 
@@ -30,6 +31,10 @@
     <None Remove="ClientApp\src\app\shared\models\register-textbox.ts" />
     <None Remove="ClientApp\src\app\shared\service\register-control.service.ts" />
     <None Remove="ClientApp\src\app\shared\service\register.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EntitiesLibrary\EntitiesLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
