@@ -11,8 +11,8 @@ changing the default csproj file.
 </ItemGroup> for experimentalDecorators Typescript warning 
 ---------
 DB:
-
- ef  migrations add CreateDatabase
- ef database update
+C:\Users\mehdi.imam\source\repos\AngularApi1\AngularApp\EntitiesLibrary>dotnet...........
+ dotnet ef  migrations add CreateDatabase
+ dotnet ef database update
  dotnet ef  migrations add RegisterObjectStringLimit
- ef database update
+ dotnet ef database update
