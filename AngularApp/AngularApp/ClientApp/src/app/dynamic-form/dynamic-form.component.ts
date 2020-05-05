@@ -40,7 +40,7 @@ export class DynamicFormComponent implements OnInit {
       
     });
     const options = { headers: headers };
-    return this.http.post<any>(this.baseUrl + 'weatherforecast/SaveRegistrationDetails', data, options);
+    return this.http.post<any>(this.baseUrl + 'register/SaveRegistrationDetails', data, options);
 
   }
 }
