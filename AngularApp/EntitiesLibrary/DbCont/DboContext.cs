@@ -14,7 +14,7 @@ namespace EntitiesLibrary.DbCont
         public DbSet<DTORegisterDetails> DTORegisterDetails { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=AngularAppDB;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer(@"Server=NLPULTP3403751\SQLEXPRESS;Database=AngularAppDB;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{

@@ -14,7 +14,7 @@ namespace EntitiesLibrary.DbCont
         {
             //IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile(@Directory.GetCurrentDirectory() + "/../MyCookingMaster.API/appsettings.json").Build();
             var builder = new DbContextOptionsBuilder<DboContext>();
-            var connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=AngularAppDB;Trusted_Connection=True;MultipleActiveResultSets=true";
+            var connectionString = @"NLPULTP3403751\SQLEXPRESS;Database=AngularAppDB;Trusted_Connection=True;MultipleActiveResultSets=true";
             builder.UseSqlServer(connectionString);
             return new DboContext(builder.Options);
         }

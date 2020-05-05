@@ -32,7 +32,7 @@ namespace AngularApp
             });
             services.AddTransient<IRegisterDetails, RegisterDetails>();
             services.AddDbContext<DboContext>(options =>
-                    options.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=AngularAppDB;Trusted_Connection=True;MultipleActiveResultSets=true")
+                    options.UseSqlServer(@"Server=NLPULTP3403751\SQLEXPRESS;Database=AngularAppDB;Trusted_Connection=True;MultipleActiveResultSets=true")
                         );
         }
 
