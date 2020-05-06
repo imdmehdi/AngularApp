@@ -4,14 +4,16 @@ using EntitiesLibrary.DbCont;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EntitiesLibrary.Migrations
 {
     [DbContext(typeof(DboContext))]
-    partial class DboContextModelSnapshot : ModelSnapshot
+    [Migration("20200506203848_CreateDatabase1")]
+    partial class CreateDatabase1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

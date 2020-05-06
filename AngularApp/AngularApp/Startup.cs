@@ -1,5 +1,6 @@
 using EntitiesLibrary;
 using EntitiesLibrary.DbCont;
+using EntitiesLibrary.DTO;
 using EntitiesLibrary.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
 
 namespace AngularApp
 {
@@ -24,7 +28,18 @@ namespace AngularApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<DboContext>();
+
+            services.AddIdentityServer()
+                .AddApiAuthorization<ApplicationUser, DboContext>();
+
+            services.AddAuthentication()
+                .AddIdentityServerJwt();
             services.AddControllersWithViews();
+            services.AddRazorPages();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -59,11 +74,16 @@ namespace AngularApp
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseIdentityServer();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
+
             });
 
             app.UseSpa(spa =>

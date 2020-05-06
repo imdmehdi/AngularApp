@@ -1,16 +1,22 @@
 ﻿using EntitiesLibrary.DTO;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using IdentityServer4.EntityFramework.Options;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
+using Microsoft.Extensions.Options;
+
+
 
 
 namespace EntitiesLibrary.DbCont
 {
-    public class DboContext: DbContext
+    public class DboContext : ApiAuthorizationDbContext<ApplicationUser>
     {
-        public DboContext(DbContextOptions<DboContext> options) : base(options) { }
+        //public DboContext(DbContextOptions<DboContext> options) : base(options) { }
+        public DboContext(
+           DbContextOptions<DboContext> options,
+           IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
+        {
+        }
         public DbSet<DTORegisterDetails> DTORegisterDetails { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
